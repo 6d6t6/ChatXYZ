@@ -1,4 +1,4 @@
-# ifi Chat
+# ChatXYZ
 
 A private, local AI chatbot that runs entirely in your browser using WebLLM.
 

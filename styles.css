@@ -32,6 +32,18 @@ body {
     height: 100vh;
 }
 
+.material-symbols-rounded {
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    font-variation-settings:
+        'FILL' 1,
+        'wght' 400,
+        'GRAD' 0,
+        'opsz' 24;
+}
+
 /* App Container */
 .app-container {
     display: flex;
@@ -261,6 +273,11 @@ body {
     font-size: 14px;
     font-weight: 500;
     flex-shrink: 0;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    cursor: default;
 }
 
 .message-container.user .message-avatar {

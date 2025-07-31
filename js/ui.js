@@ -36,7 +36,12 @@ export function appendMessage(content, role, container, messageId = null) {
   
   const avatar = document.createElement('div');
   avatar.classList.add('message-avatar');
-  avatar.textContent = role === 'user' ? 'U' : 'ChatXYZ';
+  if (role === 'user') {
+    avatar.textContent = 'U';
+  } else {
+    // Use Material Symbol for ChatXYZ
+    avatar.innerHTML = '<span class="material-symbols-rounded" style="user-select: none;">graph_6</span>';
+  }
   
   const messageElement = document.createElement('div');
   messageElement.classList.add('message');
@@ -80,7 +85,12 @@ export function renderChatMessages(container, messages = null) {
       
       const avatar = document.createElement('div');
       avatar.classList.add('message-avatar');
-      avatar.textContent = message.role === 'user' ? 'U' : 'ChatXYZ';
+      if (message.role === 'user') {
+        avatar.textContent = 'U';
+      } else {
+        // Use Material Symbol for ChatXYZ
+        avatar.innerHTML = '<span class="material-symbols-rounded" style="user-select: none;">graph_6</span>';
+      }
       
       const messageElement = document.createElement('div');
       messageElement.classList.add('message');
